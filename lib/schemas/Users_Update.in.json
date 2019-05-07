@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "serviceName": {
+            "required": true,
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50,
+            "pattern": "^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+        },
+        "uid": {
+            "required": true,
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "^[^*#&+:<>?]+$"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Parameters supplied to the Update User operation.",
+            "properties": {
+                "email": {
+                    "description": "Email address.",
+                    "type": "string"
+                },
+                "firstName": {
+                    "description": "First name.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "lastName": {
+                    "description": "Last name.",
+                    "maxLength": 100,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "note": {
+                    "description": "Note about user.",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "Password.",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "Account state.",
+                    "enum": [
+                        "Active",
+                        "Blocked"
+                    ],
+                    "type": "string",
+                    "x-ms-enum": {
+                        "modelAsString": false,
+                        "name": "UserStateContract"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "If_Match": {
+            "required": true,
+            "type": "string"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
