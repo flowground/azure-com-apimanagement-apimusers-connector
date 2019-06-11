@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the ApiManagementClient API (version 2016-10-10).
 
 Generated from: https://api.apis.guru/v2/specs/azure.com/apimanagement-apimusers/2016-10-10/swagger.json<br/>
-Generated at: 2019-05-07T17:37:12+03:00
+Generated at: 2019-06-11T18:13:17+03:00
 
 ## API Description
 
